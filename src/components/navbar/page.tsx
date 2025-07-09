@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <nav className="w-full flex items-center justify-between px-6 py-3 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
       <h1 className="text-xl font-bold text-gray-800 dark:text-white">
-        PG Manager
+        <Link href="/dashboard">PG Manager</Link>
       </h1>
       <button
         onClick={toggleTheme}
