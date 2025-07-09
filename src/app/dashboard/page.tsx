@@ -63,7 +63,7 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen px-6 py-8">
+    <div className="min-h-screen px-6 py-8 dark:bg-gray-900">
       <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
         Your Hostels
       </h2>
