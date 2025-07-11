@@ -7,7 +7,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import { AuthContextInterface, User } from "./types";
+import { AuthContextInterface, User } from "@/types/auth/page";
 
 const AuthContext = createContext<AuthContextInterface | null>(null);
 
@@ -17,7 +17,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     // TODO: Fetch user from cookie/session
     const storedUser = localStorage.getItem("user");
-    console.log("user:::", storedUser, children);
+    console.log("user:::", storedUser);
     if (storedUser) setUser(JSON.parse(storedUser));
   }, []);
 

@@ -4,9 +4,9 @@ import { useAuth } from "@/context/AuthContext";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import { Hostel } from "./types";
 import Link from "next/link";
 import useProtectedRoute from "@/hooks/useProtectedRoute/page";
+import { Hostel } from "@/types/hostel/page";
 
 export default function DashboardPage() {
   useProtectedRoute(true);
@@ -82,7 +82,7 @@ export default function DashboardPage() {
             </p>
 
             <div className="flex justify-between text-sm text-gray-700 dark:text-gray-200 mb-3">
-              <span>Rooms: {hostel.roomCount}</span>
+              <span>Rooms: {hostel.totalRooms}</span>
               <span>Tenants: {hostel.tenantCount}</span>
             </div>
 
